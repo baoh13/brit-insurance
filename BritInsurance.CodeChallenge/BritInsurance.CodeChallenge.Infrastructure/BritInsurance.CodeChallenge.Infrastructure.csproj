@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BritInsurance.CodeChallenge.Core\BritInsurance.CodeChallenge.Core.csproj" />
+  </ItemGroup>
+
 </Project>
