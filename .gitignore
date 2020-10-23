@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BritInsurance.CodeChallenge/.vs/BritInsurance.CodeChallenge/v16
+/BritInsurance.CodeChallenge/BritInsurance.CodeChallenge.Core/obj

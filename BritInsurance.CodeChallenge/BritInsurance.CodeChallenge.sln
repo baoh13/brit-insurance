@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritInsurance.CodeChallenge.Core", "BritInsurance.CodeChallenge.Core\BritInsurance.CodeChallenge.Core.csproj", "{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0840707B-97B8-4556-ABA5-D829C375A0DD}
+	EndGlobalSection
+EndGlobal
