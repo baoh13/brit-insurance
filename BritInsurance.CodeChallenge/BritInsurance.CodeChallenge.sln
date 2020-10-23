@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritInsurance.CodeChallenge.Core", "BritInsurance.CodeChallenge.Core\BritInsurance.CodeChallenge.Core.csproj", "{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritInsurance.CodeChallenge.Infrastructure", "BritInsurance.CodeChallenge.Infrastructure\BritInsurance.CodeChallenge.Infrastructure.csproj", "{801EEF41-197B-4B43-AA20-98E30CC9A2F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BritInsurance.CodeChallenge.Tests", "BritInsurance.CodeChallenge.Tests\BritInsurance.CodeChallenge.Tests.csproj", "{65A639AF-717A-419A-B6F8-22A6AF0C5979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1107A1C-BC9F-474C-BEFC-6A79906CFD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801EEF41-197B-4B43-AA20-98E30CC9A2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801EEF41-197B-4B43-AA20-98E30CC9A2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801EEF41-197B-4B43-AA20-98E30CC9A2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801EEF41-197B-4B43-AA20-98E30CC9A2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A639AF-717A-419A-B6F8-22A6AF0C5979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A639AF-717A-419A-B6F8-22A6AF0C5979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A639AF-717A-419A-B6F8-22A6AF0C5979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A639AF-717A-419A-B6F8-22A6AF0C5979}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
