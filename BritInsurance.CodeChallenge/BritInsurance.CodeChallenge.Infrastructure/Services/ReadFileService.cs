@@ -11,10 +11,8 @@ namespace BritInsurance.CodeChallenge.Infrastructure.Services
             var result = new List<string>();
             string line;
             using (var stream = new StreamReader(File.OpenRead(filePath)))
-            {
-                line = await stream.ReadLineAsync();                
-
-                while (!string.IsNullOrEmpty(line))
+            {              
+                while (!string.IsNullOrEmpty(line = await stream.ReadLineAsync()))
                 {
                      result.Add(line);
                 }

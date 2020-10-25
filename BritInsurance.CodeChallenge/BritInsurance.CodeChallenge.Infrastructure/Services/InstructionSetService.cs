@@ -1,50 +1,45 @@
 ﻿using BritInsurance.CodeChallenge.Core.Domain;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Threading.Tasks;
 
 namespace BritInsurance.CodeChallenge.Infrastructure.Services
 {
     public class InstructionSetService : IInstructionSetService
     {
-        private readonly IReadFileService _readFileService;
+        private readonly IValidator _validator;
 
-        public InstructionSetService(IReadFileService readFileService)
+        public InstructionSetService(IValidator validator)
         {
-            _readFileService = readFileService;
+            _validator = validator;
         }
 
-        public async Task<InstructionSet> GetInstructionSet(string filePath)
+        public InstructionSet GetInstructionSet(IEnumerable<string> inputLines)
         {
-            var lines = (await _readFileService.GetInstructions(filePath)).ToList();
-
-            var intructionSet = new InstructionSet();
+            var instructionSet = new InstructionSet();
             var instructions = new List<Instruction>();
 
-            for (int i = 0; i < lines.Count; i++){            
+            _validator.ValidateLastLine(inputLines.Last());
 
-                var line = lines[i].Trim();
-                
+            var orderedInstructions = inputLines.AsParallel().AsOrdered().Select(inputLine =>
+            {
+                var line = inputLine.Trim();
+                _validator.Validate(line);
+
                 var segments = line.Split(' ');
+                var number = decimal.Parse(segments[1]);
 
-                if (segments[0].Equals("apply"))
-                {
-                    intructionSet.ApplyNumber = decimal.Parse(segments[1]);
-                }
-                else
-                {
-                    instructions.Add(new Instruction()
-                    {
-                        Number = decimal.Parse(segments[1]),
-                        Operator = segments[0]
-                    });
-                }
+                var instruction = new Instruction(op: segments[0], number);
 
-            }
-            intructionSet.Instructions = instructions;
+                if (instruction.IsApplyNumber)
+                    instructionSet.ApplyNumber = instruction.Number;
 
-            return intructionSet;
+                return instruction;
+            }).ToList();
+
+            _validator.Validate(orderedInstructions);
+
+            instructionSet.Instructions = orderedInstructions.Where(i => i.Operator.ToLower() != OperatorTypes.Apply);
+            return instructionSet;
         }
     }
 }

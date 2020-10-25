@@ -2,7 +2,21 @@
 {
     public class Instruction
     {
-        public string Operator { get; set; }
-        public decimal Number { get; set; }
+        public Instruction(string op, decimal number)
+        {
+            Operator = op;
+            Number = number;
+        }
+
+        public string Operator { get; }
+        public decimal Number { get; }
+
+        public bool IsApplyNumber
+        {
+            get
+            {
+                return Operator.ToLower() == OperatorTypes.Apply;
+            }
+        }
     }
 }
